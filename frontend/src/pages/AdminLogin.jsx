@@ -1,7 +1,8 @@
 import { useState } from "react";
 import axios from "axios";
 
-const API = import.meta.env.VITE_API_URL;
+const API = "https://incident-backend-q009.onrender.com";
+
 
 export default function AdminLogin({ onLogin }) {
   const [email, setEmail] = useState("");

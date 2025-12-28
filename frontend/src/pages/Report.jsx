@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
+const API = "https://incident-backend-q009.onrender.com";
 
-const API = import.meta.env.VITE_API_URL;
 
 const INCIDENT_TYPES = [
   { label: "Fire", icon: "🔥", color: "#e53935" },

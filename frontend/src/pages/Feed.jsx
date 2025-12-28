@@ -3,8 +3,8 @@ import { useEffect, useState } from "react";
 import { io } from "socket.io-client";
 import { getSeverity } from "../utils/severity";
 import { getAddressFromCoords } from "../utils/geoCode";
+const API = "https://incident-backend-q009.onrender.com";
 
-const API = import.meta.env.VITE_API_URL;
 const socket = io(API);
 
 export default function Feed() {

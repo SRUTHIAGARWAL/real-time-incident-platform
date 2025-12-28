@@ -4,7 +4,8 @@ import { getSeverity } from "../utils/severity";
 import { getAddressFromCoords } from "../utils/geoCode";
 import AdminLogin from "./AdminLogin";
 
-const API = import.meta.env.VITE_API_URL;
+const API = "https://incident-backend-q009.onrender.com";
+
 
 export default function Admin() {
   const token = localStorage.getItem("adminToken");
