@@ -49,12 +49,26 @@ export default function Report() {
       imageBase64 = await toBase64(photo);
     }
 
-    await axios.post(`${API}/api/incidents`, {
-      type,
-      description,
-      location,
-      media: imageBase64,
-    });
+  try {
+  await axios.post(`${API}/api/incidents`, {
+    type,
+    description,
+    location,
+    media: imageBase64,
+  });
+
+  alert("Incident reported successfully");
+  setType("");
+  setDescription("");
+  setPhoto(null);
+  setLocation(null);
+} catch (err) {
+  alert("Failed to submit incident. Please try again.");
+  console.error(err);
+} finally {
+  setLoading(false);
+}
+
 
     setLoading(false);
     alert("Incident reported successfully");
