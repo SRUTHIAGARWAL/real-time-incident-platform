@@ -7,6 +7,7 @@ const IncidentSchema = new mongoose.Schema({
     lat: Number,
     lng: Number
   },
+  media: String,
   status: { type: String, default: "reported" },
   upvotes: { type: Number, default: 0 },
   verified: { type: Boolean, default: false },
